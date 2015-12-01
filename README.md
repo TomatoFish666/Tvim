@@ -1,2 +1,7 @@
 # Learn_VimScript
-Learn VimScript the Hard Way
+
+The Book: Learn VimScript the Hard Way
+
+---
+
+---
