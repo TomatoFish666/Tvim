@@ -1,0 +1,23 @@
+# ch01_Echoing_Messages
+
+---
+
+---
+
+## echo and echom commands
+
+### echo
+
+- run `:help echo` in vim 
+- The output will disappear by the time your script is done.
+
+### echom
+
+- run `:help echom` in vim
+- It will save your output, and you can use :messages to review it.
+
+---
+
+## Comments
+
+- // in C , # in bash , " in Vimscript

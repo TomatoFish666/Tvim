@@ -1,0 +1,38 @@
+# ch02_Setting_Options
+
+---
+
+---
+
+## Boolean Options
+
+- Command: `:set number & set nonumber`
+- Command: `:set <name> & set no<name>`
+
+---
+
+## Toggling Boolean Options
+
+- Command: `:set <name> & set <name>!`
+- set the option to the opposite
+
+---
+
+## Checking Options
+
+- Command: `:set <name>?`
+- Ask Vim what an option is currently set to?
+
+---
+
+## Options with Values
+
+- Command: `:set <name>=<value>` ---> to set
+- Command: `:set <name>?` ---> to check
+
+---
+
+## Setting Multiple Options at Once
+
+- ......
+
