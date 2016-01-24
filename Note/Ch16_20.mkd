@@ -1,0 +1,47 @@
+# Ch16_20
+
+---
+
+---
+
+## ch16_More_Operator-Pending_Mappings
+
+### Normal
+
+### Execute
+
+### Results
+
+---
+
+## ch17_Status_Lines
+
+### Width_and_Padding
+
+### General_Format
+
+### Splitting
+
+---
+
+## ch18_Responsible_Coding
+
+### Commenting
+
+### Grouping
+
+### Short_Names
+
+---
+
+## ch19_Variables
+
+### Options_as_Variables
+
+### Local_Options
+
+### Registers_as_Variables
+
+---
+
+## ch20_Variable_Scoping

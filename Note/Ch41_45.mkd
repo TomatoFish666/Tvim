@@ -1,0 +1,58 @@
+# Ch41_45
+
+---
+
+---
+
+## ch41_Creating_a_Full_Plugin
+
+### Potion
+
+---
+
+## ch42_Plugin_Layout_in_the_Dark_Ages
+
+### Basic_Layout
+
+### ~/.vim/colors/
+
+### ~/.vim/plugin/
+
+### ~/.vim/ftdetect/
+
+### ~/.vim/ftplugin/
+
+### ~/.vim/indent/
+
+### ~/.vim/compiler/
+
+### ~/.vim/after/
+
+### ~/.vim/autoload/
+
+### ~/.vim/doc/
+
+---
+
+## ch43_A_New_Hope_Plugin_Layout_with_Pathogen
+
+### Runtimepath
+
+### Pathogen
+
+### Being_Pathogen-Compatible
+
+---
+
+## ch44_Detecting_Filetypes
+
+### Detecting_Potion_Files
+
+---
+
+## ch45_Basic_Syntax_Highlighting
+
+### Hightlighting_Keywords
+
+### Hightlighting_Functions
+

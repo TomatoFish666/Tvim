@@ -1,0 +1,198 @@
+# Ch11_15
+
+---
+
+---
+
+## ch11_Buffer-local_Options_and_Mappings
+
+- we're going to set each of them(mappings,abbrevations,options) in a single buffer at a time.
+
+### Mappings
+
+Example:                        
+
+- in file1, run `:nnoremap <leader>d dd`
+- in file1, run `:nnoremap <buffer> <leader>x dd`
+- in file1, in normal mode, type `<leader>d`, vim will delete one line
+- in file1, in normal mode, type `<leader>x`, vim will delete one line
+- in file2, in normal mode, type `<leader>d`, vim will delete one line
+- in file2, in normal mode, type `<leader>x`, vim will delete one character
+
+`<buffer>`:                     
+
+- the `<buffer>` in the second nnoremap command told Vim to only consider that mapping when we're in the buffer where we defined it
+
+### Local_Leader
+
+- in general, when you create a mapping that only applies to specific buffers you should use `<localleader>` instead of `<leader>`
+
+- Using two separate leader keys provides a sort of "namespacing" that will help you keep all your various mappings straight in your head.
+
+- It's even more important when you're writing a plugin for other people to use. The convention of using `<localleader>` for local mappings will prevent your plugin from overwriting someone else's `<leader>` mapping that they've painstakingly burned into their fingers over time.
+
+### Settings
+
+### Shadowing
+
+- in file1, run `:nnoremap <buffer> Q x`
+
+- in file1, run `:nnoremap Q x`
+
+- in file1, type Q, vim will delete a character
+    - the first mapping is more specific than the second
+    
+- in file2, type Q, vim will delete the current line
+
+---
+
+## ch12_Autocommands
+
+- autocommands is as important as mappings
+
+### Autocommand_Structure
+
+- run `:autocmd BufNewFile * :write`
+    - the first piece of the command is "BufNewFile" which is the type of event we want to watch for
+    - read `:help autocmd-events` to see a list of all the events you can bind autocommands to
+    - the next part is "*" which is a "pattern" that lets you be more specific about when you want the command to fire.
+    - the final part of the command is the command we want to run when the event fires
+    
+### Another_Example
+
+- run `:autocmd BufWritePre *.html :normal gg=G`
+    - the event type is BufWritePre, which means the event will be checked just before you write any file
+    - the pattern is "*.html", which means only before files end in .html, the command will be executed.
+    - command `:normal gg=G` will tell Vim to reindent the current file
+
+### Multiple_Events
+
+- you can create a single autocommand bound to multiple events by separating the events with a comma
+    - run `autocmd BufWritePre,BufRead *.html :normal gg=G`
+
+- A common idiom in Vim scripting is to pair the BufRead and BufNewFile events together to run a command whenever you open a certain kind of file, regardless of whether it happens to exist already or not.
+    - run `:autocmd BufNewFile,BufRead *.html setlocal nowrap`
+    
+### FileType_Events
+
+- One of the most useful events is the FileType event. This event is fired whenever Vim sets a buffer's filetype.
+    - run `autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>`
+    - run `autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>`
+
+---
+
+## ch13_Buffer-Local_Abbreviations
+
+- in file1, run `iabbrev <buffer> --- &mdash;`
+
+- in file1, type "Hello --- world."
+    - "---" will be replaced by "$mdash;"
+    
+- in file2, type again
+
+### Autocommands_and_Abbreviations
+
+- run `:autocmd FileType python :iabbrev <buffer> iff if:<left>`
+- run `:autocmd FileType javascript :iabbrev <buffer> iff if:<left>`
+
+---
+
+## ch14_Autocommand_Groups
+
+### The_Problem
+
+- if you write two 
+
+- The problem is that sourcing your `~/.vimrc` file rereads the entire file, including any autocommands you've defined! This means that every time you source your `~/.vimrc` you'll be duplicating autocommands, which will make vim run slower because it executes the same commands over and over
+
+### Grouping_Autocommands
+
+- Vim has a solution to the problem above
+
+- the first step is to group related autocommands into named groups
+    - when you use augroup multiple times vim will combime the groups each time.
+    
+```
+:augroup testgroup
+:   autocmd BufWrite * :echom "foo"
+:   autocmd BufWrite * :echom "bar"
+:augroup END
+
+:augroup testgroup
+:   autocmd BufWrite * :echom "Baz"
+:augroup END
+```
+
+### Clearing_Groups
+
+- if you want to clear a group you can use "autocmd!"
+
+```
+:augroup testgroup
+:   autocmd!
+:   autocmd BufWrite * :echom "Cats"
+:augroup END
+```
+
+### Using_Autocommands_in_Your_Vimrc
+
+---
+
+## ch15_Operator-Pending_Mappings
+
+- an operator is a command that waits for you to enter a movement command, and then does something on the text between where you currently are and where the movement would take you
+
+### Movement_Mappings
+
+- when you're trying to think about how to define a new operator-pending movement, you can think of it like this:
+    - start at the cursor position
+    - enter visual mode (charwise)
+    - ...mapping keys go here...
+    - all the text you want to include in the movement should now be selected
+
+```vimscript
+:onoremap p i(
+
+in file, 
+type "return person.get_pets(type=""cat, fluffy_only=True)"
+
+put your cursor in the parentheses, type dp
+vim will delete the text inside the parentheses and left you in normal mode
+
+put your cursor in the parentheses, type cp
+vim will delete the text inside the parentheses and left you in insert mode
+
+```
+### Changing_the_Start
+
+- the problem: if our movements always have to start at the current cursor positions it limits what we cand do.
+
+```
+:onoremap in( :<c-u>normal! f(vi(<cr>
+:onoremap il( :<c-u>normal! F)vi(<cr>
+
+in file, type "print foo(bar)"
+
+put the cursor before parentheses, type cin(
+put the cursor after parentheses, type cil(
+
+you can change the content in the parentheses
+```
+- the `<c-u>` is something special that it needs to be there to make the mappings work in all cases
+
+- normal! is a command used to simulate pressing keys in normal node
+    - we'll talk about it in a later chapter
+
+- f( , move forwords to the nearest ( character
+
+- F) , move backwords to the nearest ) character
+
+- vi( , visually select inside the parentheses
+
+- the `<cr>` is what executes the :normal! command
+
+### General_Rules
+
+- A good way to keep the multiple ways of creating operator-pending mappings straight is the remember following two rules
+    - if your operator-pending mapping ends with some text visually selected, vim will operate on that text
+    - otherwise, vim will operate on the text between the original cursor position and the new position

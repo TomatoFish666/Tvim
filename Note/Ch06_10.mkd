@@ -1,0 +1,130 @@
+# Ch06_10
+
+---
+
+---
+
+## ch06_Leaders
+
+### Mapping Key Sequences
+
+- You can pick a key that you don't care about(like -) as a "prefix" key and create mappings on top of it.
+
+### Leader
+
+- Vim calls this "prefix" key the "leader".
+
+- You can set your leader key to whatever you like.
+    - run `:let mapleader = "-"`
+    - of course, you can replace - with any key you like
+
+- When you're creating new mppings you can use `<leader>`
+    - run `:nnoremap <leader>d dd`
+
+- Why bother with setting `<leader>` at all?
+    - defining it in one place makes it easy to change later
+    - someone else will immediately know what you mean when you say `<leader>`, and they can simply copy.
+    - many vim plug-in create mappings that start with `<leader>`
+
+### Local Leader
+
+- "local leader" is meant to be a prefix for mappings that only take effect for certain types of files, like Python files or HTML files.
+    - we'll talk about how to make mappings for specific types of files later in the book
+
+---
+
+## ch07_Editing Your Vimrc
+
+- The idea of this chapter is that you want to (make it easier to (make it easier to (edit text)))
+
+### Editing Mapping
+
+- to open `~/.vimrc` quickly
+    - run `:nnoremap <leader>ev :vsplit $MYVIMRC<cr>`
+    - $MYVIMRC is a special Vim variable that points to your `~/.vimrc` file
+    - Command: `:vsplit` opens a new vertical split
+    - Command: `:split` opens a new horizontal split
+
+### Sourcing Mapping
+
+- Your `~/.vimrc` file is only read when you start vim, which means you need to also run the command manually to make it work in the current session.
+
+- to make it easier
+    - run `:nnoremap <leader>sv :source $MYVIMRC<cr>`
+
+---
+
+## ch08_Abbreviations（缩写）
+
+- Vim has a feature called "abbreviations" that feel similar to mappings but are meant for use in insert, replace, and command modes.
+    - They're extremely flexible and powerful
+
+- run `:iabbrev adn and` , then type "One adn two." in insert mode
+    - the "adn" will be replaced by "and"
+
+### Keyword Characters
+
+- Vim will substitute an abbreviation when you type any "non-keyword character" after an abbreviation.
+    - "non-keyword character" means any character not in the iskeyword option
+    - run `:set iskeyword?` , iskeyword=@,48-57,_,192-255
+
+- you can simply remember that abbreviations will be expanded when you type anything that's not a letter,number,or underscore.
+
+### More Abbreviations
+
+- abbreviations are useful for more than just correcting typos
+
+- some abbreviations take large chunks of text that you type often and compress them down to a few characters
+    - run `:iabbrev @@ tomatofish@163.com`
+    - run `:iabbrev ccopy Copyright 2016 TomatoFish, all rights reserved.`
+    
+### Why Not Use Mappings?
+
+```vimscript
+run
+:inoremap ssig -- <cr>Steve Losh<cr>steve@stevelosh.com
+
+enter insert mode and type the text:
+Larry Lessig wrote the book "Remix".
+```
+- mappings don't take into account what characters come before or after the map - they only look at the specific sequence that you mapped to.
+
+```
+run
+:iunmap ssig
+:iabbrev ssig -- <cr>Steve Losh<cr>steve@stevelosh.com
+
+then type again
+```
+- this time vim will pay attentions to the characters before and after ssig and only expand it when we want
+
+---
+
+## ch09_More Mappings
+
+- mappings are one of the easiest and fastest ways to make your vim editing more productive so it's good to focus on them quite a bit
+
+### A More Complicated Mapping
+
+- run `:nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel`
+
+---
+
+## ch10_Training Your Fingers
+
+- the idea of this chapter is to change your habbit, and tell you how to get accustomed to new mappings
+
+- the trick to relearning a mapping is to force yourself to use it by disabling the old key(s)
+
+### Learning the Map
+
+```vimscript
+run `:inoremap jk <esc>`
+
+run `:inoremap <esc> <nop>` ---> nop means "no operation"
+    
+practice makes perfact
+```
+
+- this idea applies to any new mapping you create to replace an old one, and even to life in general
+    - when you want to change a habbit, make it harder or impossible to do

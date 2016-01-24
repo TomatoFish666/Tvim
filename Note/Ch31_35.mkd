@@ -1,0 +1,69 @@
+# Ch31_35
+
+---
+
+---
+
+## ch31_Basic_Regular_Expressions
+
+### Highlighting
+
+### Searching
+
+### Magic
+
+### Literal_Strings
+
+### Very_Magic
+
+---
+
+## ch32_Case_Study_Grep_Operator_Part_One
+
+### Grep
+
+### Usage
+
+### A_Preliminary_Sketch
+
+### The_Search_Term
+
+### Escaping_Shell_Command_Arguments
+
+### Cleanup
+
+---
+
+## ch33_Case_Study_Grep_Operator_Part_Two
+
+### Create_a_File
+
+### Skeleton
+
+### Visual_Mode
+
+### Motion_Types
+
+### Copying_the_Text
+
+### Escaping_the_Search_Term
+
+---
+
+## ch34_Case_Study_Grep_Operator_Part_Three
+
+### Saving_Registers
+
+### Namespacing
+
+---
+
+## ch35_Lists
+
+### Indexing
+
+### Slicing
+
+### Concatenation
+
+### List_Functions

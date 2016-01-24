@@ -127,8 +127,11 @@ echom:
 
 ## ch05_Strict_Mapping
 
-- run `:map - dd`
+- run `:nmap - dd`
 - remove mappings by running `:nunmap -`
+    - nmap ---> nunmap
+    - imap ---> iunmap
+    - vmap ---> vunmap
 
 ### Recursion（循环）
 
