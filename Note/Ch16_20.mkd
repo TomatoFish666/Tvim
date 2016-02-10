@@ -16,6 +16,8 @@
 
 ## ch17_Status_Lines
 
+- 这边有点问题，教程的命令没有效果，或者我没理解，看错了地方。。。
+
 ### Width_and_Padding
 
 ### General_Format
