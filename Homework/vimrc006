@@ -1,0 +1,11 @@
+" ch06
+" 阅读:help mapleader。
+" 阅读:help maplocalleader。
+" 在你的~/.vimrc文件中设置mapleader和maplocalleader。
+" 增加<leader>前缀到之前章节中你添加到~/.vimrc文件中的映射命令， 防止那些映射覆盖了默认的按键作用。
+
+let mapleader = "-"
+
+nnoremap <leader>d dd
+
+let maplocalleader = "\\"

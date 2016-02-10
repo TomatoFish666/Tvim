@@ -1,0 +1,13 @@
+" ch02
+" 阅读:help 'number'（注意有单引号）帮助文档。
+" 阅读:help relativenumber帮助文档。
+" 阅读:help numberwidth帮助文档。
+" 阅读:help wrap帮助文档。
+" 阅读:help shiftround帮助文档。
+" 阅读:help matchtime帮助文档。
+" 按你自己的喜好在你的~/.vimrc文件中添加几个设置选项。
+
+set number
+set numberwidth=4
+
+set nowrap

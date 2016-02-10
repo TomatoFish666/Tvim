@@ -1,0 +1,7 @@
+" ch01
+" 阅读 :help echo 帮助文档
+" 阅读 :help echom 帮助文档
+" 阅读 :help messages 帮助文档
+" 添加一行代码到你的~/.vimrc文件中，使得每个打开Vim时都会显示一个可爱的ASCII 字符猫(>^.^<)。
+
+echo "(>^.^<)"
