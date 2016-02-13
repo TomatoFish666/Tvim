@@ -3,14 +3,23 @@
 - The Book: Learn VimScript the Hard Way
     - 第一本读完的英文原版书，209页，一个合适的开始
     
-- 中文版：[笨方法学Vimscript](http://higrid.net/hi/books/learnvimthehardway)
+- 中文版：[笨方法学Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/)
     - 学完英文版后，第二遍学中文版，解决一些不太理解的地方，以及复习
 
 ---
 
 ---
 
-## Summary of each chapter
+### 2016.1.24
+
+- 看完了英文版的1~15章，感觉进度比较慢，内容还是很不错的，可以跟着敲入命令
+
+### 2016.2.13
+
+- 这几天看中文版，看完了16~40章，果然中文效率高一点。。。
+
+- 打算vimscript的学习告一段落，先根据网上大牛的配置方案，配置自己的vim，熟悉一些布尔项和插件；熟练了之后，再回来重新看英文版的，并把41章往后的一个插件实例完成
+    - 第二遍要完成 各章的练习和要求阅读的文档，目前功力还不够写插件。。。
 
 ---
 
