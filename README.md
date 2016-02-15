@@ -31,7 +31,11 @@
 
 ---
 
-## Plug-in
+## 我选择的插件集合
+
+---
+
+## 插件
 
 - 安装使用比较简单，百度都能找到很多很好的教程，不再赘述
 
@@ -49,26 +53,79 @@
     - [vim-scripts.org](http://vim-scripts.org/)，汇总了各种插件的github地址
     - 插件管理，具体见博文[Vim插件管理利器——Vundle](http://blog.laily.net/archives/30/)
 
-### 通用
+### 项目文件管理
 
 - [nerdtree](https://github.com/scrooloose/nerdtree)
     - vim运行时显式目录和文件结构
-
+    
 - [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
     - 显示已打开的文件(buffer)，方便在打开的文件中跳转
+
+- [ctrlp](https://github.com/ctrlpvim/ctrlp.vim)
+    - 对文件以及buffer进行模糊查询，快速打开文件
+
+### 代码结构
+
+- [taglist](https://github.com/vim-scripts/taglist.vim)
+    - ctags
     
 - [tagbar](https://github.com/majutsushi/tagbar)
     - 列出当前文件中的宏、全局变量、函数、类等信息
     - taglist插件的升级版，功能更加完善
 
+### 语法检查
+
+- [syntastic](https://github.com/scrooloose/syntastic)
+    - 语法检查，支持很多很多语言。。。
+
+- [pyflakes](https://github.com/kevinw/pyflakes-vim)
+    - 针对python提供实时语法检查
+    - Github上作者表示推荐用Syntastic，支持多语言，除非你只写python
+
+### 代码补全
+
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
-    - [snipmate](https://github.com/msanders/snipmate.vim)
-    - [neocomplete](https://github.com/Shougo/neocomplete.vim)
-    - UltiSnips
-    - 代码补全
+    - Github 9000+star
+    
+- [neocomplete](https://github.com/Shougo/neocomplete.vim)
+    
+- [omnicppcomplete](https://github.com/vim-scripts/OmniCppComplete)
+    - 主要提供C/C++代码的自动补全功能
+
+- [pydiction](https://github.com/rkulla/pydiction)
+    - 针对python的补全提示
+    
+- [jedi-vim](https://github.com/davidhalter/jedi-vim)
+    - 提供很好的python代码提示，以及shift+k 提供 __doc__ 展示功能
+
+### 代码片段
+
+- [ultisnips](https://github.com/SirVer/ultisnips)
+    - 需要python支持，snipmate是VimL
+
+- [snipmate](https://github.com/msanders/snipmate.vim)
+    - github上还是2010年更新的，已经停止了维护，维护小组改为支持ultisnips
         
+### 批量注释
+
+- [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
+    - nerdcommenter可以根据文件类型自动选择注释风格
+
+- [vim-commentary](https://github.com/tpope/vim-commentary)
+    - 批量注释单行或多行，以及批量去除注释
+
+### 辅助
+
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
-    - 具有Sublime Text的多光标编辑功能
+    - 多光标编辑功能
+
+- [mark](https://github.com/vim-scripts/Mark)
+    - 自定义高亮变量，选中词再\m
+    
+- [vim-markdown](https://github.com/plasticboy/vim-markdown)
+    - markdown语法高亮
+
+### 界面美美哒
 
 - [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
     - 集成了很多主题
@@ -77,41 +134,23 @@
     - 漂亮的状态栏插件，不同模式有不同颜色
     - 可能会遇到字体问题，用普通模式，虽然形状不够酷炫，颜色还是有的
 
-- [mark](https://github.com/vim-scripts/Mark)
-    - 自定义高亮变量，选中词再\m
-    
-- [ctrlp](https://github.com/ctrlpvim/ctrlp.vim)
-    - 对文件以及buffer进行模糊查询，快速打开文件
-
-- [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
-    - [vim-commentary](https://github.com/tpope/vim-commentary)
-    - 批量注释单行或多行，以及批量去除注释
-    - nerdcommenter可以根据文件类型自动选择注释风格
-    
 ### C/C++
 
-- c.vim
-
-- omnicppcomplete
-    - 提供C++代码的自动补全功能
-
-- a.vim
+- [c.vim](https://github.com/vim-scripts/c.vim)
+    - C/C++必备，功能多且强大
+    
+- [a.vim](https://github.com/vim-scripts/a.vim)
     - 提供快速切换.h和.cpp文件的功能
 
 ### Java
 
-- eclim
+- [eclim](https://github.com/ervandew/eclim)
+    - eclipse 和 vim的有机结合，似乎不是很好用
 
 ### Python
 
-- pyflakes
-    - 提供实时检查python代码语法的功能（强烈推荐！）
-
-- pydoc
+- [pydoc](https://github.com/fs111/pydoc.vim)
     - 在vim中查找python文档
-
-- jedi-vim
-    - 提供很好的python代码提示，以及shift+k 提供 __doc__ 展示功能
 
 ### HTML/CSS/Javascript
 
@@ -119,11 +158,6 @@
     - 比如将三行内容快速放入相同的标签内，web开发（列表li）会比较有用
     
 ### Json/XML
-
-### Markdown
-
-- [vim-markdown](https://github.com/plasticboy/vim-markdown)
-    - markdown语法高亮
 
 ---
 
@@ -165,6 +199,8 @@
 
 - [知乎_用 Vim 写 Python 的最佳实践是什么？](https://www.zhihu.com/question/19655689)
 
+- [知乎_vim下写C语言代码，怎样才能看起来五颜六色而不单调？](https://www.zhihu.com/question/26713049)
+
 - [Gvim/Vim 配置好了常用插件（Windows 与 Linux 通用）](http://www.oschina.net/code/snippet_574132_13357/)
 
 - [史上最强？的Vim 配置文件（修正版）](http://blog.csdn.net/redguardtoo/article/details/1172136)
@@ -172,7 +208,6 @@
 - [经典vim插件功能说明、安装方法和使用方法介绍（已更新）](http://blog.csdn.net/simanstar/article/details/8865659)
 
 - [Vim 配置详解](http://www.cnblogs.com/witcxc/archive/2011/12/28/2304704.html)
-
 
 
 
