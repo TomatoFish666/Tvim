@@ -24,14 +24,36 @@
 ### 2016.2.15
 
 - vim插件好多啊。。。今天看了二十个左右的网上教程，有很多有名的插件，安装也简单
-    - pathogen还是vundle呢。。。就先用vundle吧～～～
+    - pathogen还是vundle呢。。。先用pathogen吧，插件一个一个下了装。。。熟练了再用vundle~~~
 
 - 这些插件确实解决了一些我以前果用vim时碰到的烦恼，比如快速打开，buffer等，越来越喜欢vim了～～～
     - vim的文档文化真心赞！
 
+- 今天根据网上成吨的教程，大概了解了一下出现频率很高的n个插件，vim比想象的强大很多！
+    - 然后就开工配置vim啦～～～啦啦啦～～～
+
 ---
 
 ## 我选择的插件集合
+
+- 插件管理：pathogen/vundle
+
+- 文件管理：nerdtree , minibufexpl , ctrlp
+
+- 代码结构：tagbar
+
+- 语法检查：syntastic
+
+- 自动补全：youcompleteme
+
+- 代码片段：ultisnips
+
+- 批量注释：nerdcommenter
+
+- 辅助功能：vim-multiple-cursors , mark , vim-markdown
+
+- 酷炫界面：vim-colorschemes ， powerline
+
 
 ---
 
@@ -53,13 +75,14 @@
     - [vim-scripts.org](http://vim-scripts.org/)，汇总了各种插件的github地址
     - 插件管理，具体见博文[Vim插件管理利器——Vundle](http://blog.laily.net/archives/30/)
 
-### 项目文件管理
+### 文件管理
 
 - [nerdtree](https://github.com/scrooloose/nerdtree)
     - vim运行时显式目录和文件结构
     
 - [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
     - 显示已打开的文件(buffer)，方便在打开的文件中跳转
+    - 快速浏览和操作Buffer 
 
 - [ctrlp](https://github.com/ctrlpvim/ctrlp.vim)
     - 对文件以及buffer进行模糊查询，快速打开文件
@@ -88,6 +111,7 @@
     - Github 9000+star
     
 - [neocomplete](https://github.com/Shougo/neocomplete.vim)
+    - [neocomplcache](https://github.com/Shougo/neocomplcache.vim)，作者表示维护的不好，作者建议用neocomplete
     
 - [omnicppcomplete](https://github.com/vim-scripts/OmniCppComplete)
     - 主要提供C/C++代码的自动补全功能
@@ -98,6 +122,9 @@
 - [jedi-vim](https://github.com/davidhalter/jedi-vim)
     - 提供很好的python代码提示，以及shift+k 提供 __doc__ 展示功能
 
+- [tern_for_vim](https://github.com/ternjs/tern_for_vim)
+    - 针对 js 的代码补全
+    
 ### 代码片段
 
 - [ultisnips](https://github.com/SirVer/ultisnips)
@@ -114,7 +141,7 @@
 - [vim-commentary](https://github.com/tpope/vim-commentary)
     - 批量注释单行或多行，以及批量去除注释
 
-### 辅助
+### 辅助功能
 
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
     - 多光标编辑功能
@@ -125,7 +152,7 @@
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
     - markdown语法高亮
 
-### 界面美美哒
+### 酷炫界面
 
 - [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
     - 集成了很多主题
@@ -152,12 +179,30 @@
 - [pydoc](https://github.com/fs111/pydoc.vim)
     - 在vim中查找python文档
 
+- [python.vim](https://github.com/vim-scripts/python.vim)
+    - 提供语法检查和排版缩进等功能
+
 ### HTML/CSS/Javascript
 
+- [css.vim](https://github.com/JulesWang/css.vim)
+    - 提供实时显示颜色的功能，如#FFFFFF
+
+- [vim-javascript](https://github.com/pangloss/vim-javascript)
+    - 提供语法检查和排版缩进等功能
+    
 - [zencoding/emmet-vim](https://github.com/mattn/emmet-vim)
     - 比如将三行内容快速放入相同的标签内，web开发（列表li）会比较有用
     
+- [vim-jsbeautify](https://github.com/maksimr/vim-jsbeautify)
+    - 快速格式化 html/css/javascript 代码
+    
+- [matchit.zip](https://github.com/vim-scripts/matchit.zip)
+    - 使%不仅能够匹配简单的`<>()`，还能匹配`<html></html>`之类标签的功能
+    
 ### Json/XML
+
+- [JSON.vim](https://github.com/vim-scripts/JSON.vim)
+    - 提供json的语法高亮
 
 ---
 
@@ -203,17 +248,4 @@
 
 - [Gvim/Vim 配置好了常用插件（Windows 与 Linux 通用）](http://www.oschina.net/code/snippet_574132_13357/)
 
-- [史上最强？的Vim 配置文件（修正版）](http://blog.csdn.net/redguardtoo/article/details/1172136)
-
-- [经典vim插件功能说明、安装方法和使用方法介绍（已更新）](http://blog.csdn.net/simanstar/article/details/8865659)
-
 - [Vim 配置详解](http://www.cnblogs.com/witcxc/archive/2011/12/28/2304704.html)
-
-
-
-
-
-
-
-
-
