@@ -32,9 +32,13 @@
 - 今天根据网上成吨的教程，大概了解了一下出现频率很高的n个插件，vim比想象的强大很多！
     - 然后就开工配置vim啦～～～啦啦啦～～～
 
+### 2016.2.16
+
+- 今天一定要把vim配置好！！！
+
 ---
 
-## 我选择的插件集合
+## 目前选择的插件集合
 
 - 插件管理：pathogen/vundle
 
@@ -157,9 +161,10 @@
 - [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
     - 集成了很多主题
     
-- [powerline](https://github.com/powerline/powerline)
+- [powerline](https://github.com/Lokaltog/vim-powerline)
     - 漂亮的状态栏插件，不同模式有不同颜色
     - 可能会遇到字体问题，用普通模式，虽然形状不够酷炫，颜色还是有的
+    - 另外有一个star数5000+的powerline，python写的，不是那个
 
 ### C/C++
 
