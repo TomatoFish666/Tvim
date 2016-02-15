@@ -21,6 +21,14 @@
 - 打算vimscript的学习告一段落，先根据网上大牛的配置方案，配置自己的vim，熟悉一些布尔项和插件；熟练了之后，再回来重新看英文版的，并把41章往后的一个插件实例完成
     - 第二遍要完成 各章的练习和要求阅读的文档，目前功力还不够写插件。。。
 
+### 2016.2.15
+
+- vim插件好多啊。。。今天看了二十个左右的网上教程，有很多有名的插件，安装也简单
+    - pathogen还是vundle呢。。。就先用vundle吧～～～
+
+- 这些插件确实解决了一些我以前果用vim时碰到的烦恼，比如快速打开，buffer等，越来越喜欢vim了～～～
+    - vim的文档文化真心赞！
+
 ---
 
 ## Plug-in
@@ -47,18 +55,18 @@
     - vim运行时显式目录和文件结构
 
 - [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
-
+    - 显示已打开的文件(buffer)，方便在打开的文件中跳转
+    
 - [tagbar](https://github.com/majutsushi/tagbar)
     - 列出当前文件中的宏、全局变量、函数、类等信息
     - taglist插件的升级版，功能更加完善
 
-- [snipmate](https://github.com/msanders/snipmate.vim)
-    - 代码补全
-    - neocomplete
-    - neocompletecache
-    - youcompleteme
+- [youcompleteme](https://github.com/Valloric/YouCompleteMe)
+    - [snipmate](https://github.com/msanders/snipmate.vim)
+    - [neocomplete](https://github.com/Shougo/neocomplete.vim)
     - UltiSnips
-    
+    - 代码补全
+        
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
     - 具有Sublime Text的多光标编辑功能
 
@@ -117,22 +125,53 @@
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
     - markdown语法高亮
 
-### 
+---
 
+## 参考的网上教程、问答等
 
+- [vim官网](http://www.vim.org/)
 
+- [Ubuntu中文Wiki_Vim](http://wiki.ubuntu.org.cn/Vim)
 
+- [开源中国社区_vim相关](http://www.oschina.net/question/tag/vim)
 
+- [https://github.com/yangyangwithgnu/use_vim_as_ide/issues](https://github.com/yangyangwithgnu/use_vim_as_ide/issues)
+    - 完整，全面的配置教程
+    
+- [易水博客_vi/vim使用进阶: 目录](http://easwy.com/blog/archives/advanced-vim-skills-catalog/)
+    - 也是比较系统完整的
+    - 旧版CSDN博客地址：[Easwy的专栏](http://blog.csdn.net/easwy/article/category/234641/3)
+    
+- [Vimer的程序世界_本博使用的vim(gvim)相关插件整理](http://www.vimer.cn/2010/06/%E6%9C%AC%E5%8D%9A%E4%BD%BF%E7%94%A8%E7%9A%84vimgvim%E7%9B%B8%E5%85%B3%E6%8F%92%E4%BB%B6%E6%95%B4%E7%90%86.html)
+    - [Vimer的程序世界](http://www.vimer.cn/category/vim)，这个博客里有不少vim相关的文章
 
+- [吴垠_手把手教你把Vim改装成一个IDE编程环境(图文)](http://blog.csdn.net/wooin/article/details/1858917)
+    - 系统，完整，详细，但是2007年的博文
+    
+- [池建强的BLOG_谁说Vim不是IDE？ 系列](http://www.cnblogs.com/chijianqiang/tag/vim/)
+    - 一个系列的文章，2012年更了前四篇，后面的就没了。。。
 
+- [vim 下web开发html css js插件](http://blog.csdn.net/wangran51/article/details/9370553)
 
+- [vim配置及插件安装管理（超级详细）](http://blog.csdn.net/namecyf/article/details/7787479)
 
+- [高效vim插件](http://my.oschina.net/swuly302/blog/156784?fromerr=XNflyf2I)
 
+- [知乎_你最常用的 VIM 插件有哪些？](https://www.zhihu.com/question/19634223)
 
+- [知乎_用 vim 编辑怎样才能比 IDE 更快？](https://www.zhihu.com/question/22096642)
 
+- [知乎_有哪些好用到爆的vim插件？](https://www.zhihu.com/question/23590572)
 
+- [知乎_用 Vim 写 Python 的最佳实践是什么？](https://www.zhihu.com/question/19655689)
 
+- [Gvim/Vim 配置好了常用插件（Windows 与 Linux 通用）](http://www.oschina.net/code/snippet_574132_13357/)
 
+- [史上最强？的Vim 配置文件（修正版）](http://blog.csdn.net/redguardtoo/article/details/1172136)
+
+- [经典vim插件功能说明、安装方法和使用方法介绍（已更新）](http://blog.csdn.net/simanstar/article/details/8865659)
+
+- [Vim 配置详解](http://www.cnblogs.com/witcxc/archive/2011/12/28/2304704.html)
 
 
 
