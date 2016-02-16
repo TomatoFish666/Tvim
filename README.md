@@ -39,6 +39,12 @@
 
 - 还差YCM插件和集成编译工具了！配置的时候又看到了一些不错的插件。。。也觉得自己一开始没必要装那么多插件，不要想一次装全了，慢慢来，有需求了再装～～～
 
+- 11个插件基本配置完毕
+    - YouCompleteMe 和 Syntastic 两个插件有点问题，前者似乎深度集成了后者
+    - YCM碰到了问题，[这篇博客](http://blog.csdn.net/liubf1994/article/details/50543786)，给了一个解决方案，但肯定是不够的
+    - Version0.1！！！暂时告一段落啦～！
+    - 以后多多编程，碰到问题逐个解决，手头紧迫的事情完成了，再好好阅读vim和插件的help文档！！！Practice makes Perfect!!!
+    
 ---
 
 ## 目前选择的插件集合
@@ -118,6 +124,12 @@
 - [youcompleteme](https://github.com/Valloric/YouCompleteMe)
     - Github 9000+star
     
+- [jedi-vim](https://github.com/davidhalter/jedi-vim)
+    - 提供很好的python代码提示，以及shift+k 提供 __doc__ 展示功能
+
+- [tern_for_vim](https://github.com/ternjs/tern_for_vim)
+    - 针对 js 的代码补全
+    
 - [neocomplete](https://github.com/Shougo/neocomplete.vim)
     - [neocomplcache](https://github.com/Shougo/neocomplcache.vim)，作者表示维护的不好，作者建议用neocomplete
     
@@ -126,13 +138,7 @@
 
 - [pydiction](https://github.com/rkulla/pydiction)
     - 针对python的补全提示
-    
-- [jedi-vim](https://github.com/davidhalter/jedi-vim)
-    - 提供很好的python代码提示，以及shift+k 提供 __doc__ 展示功能
 
-- [tern_for_vim](https://github.com/ternjs/tern_for_vim)
-    - 针对 js 的代码补全
-    
 ### 代码片段
 
 - [ultisnips](https://github.com/SirVer/ultisnips)

@@ -173,6 +173,8 @@ nnoremap <leader>sch :AS<cr>
 " }
 
 " youcompleteme{
+" 有问题的！！！
+let g:ycm_global_ycm_extra_conf = '/home/tomatofish/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'  
 " }
 
 " tagbar{
@@ -198,3 +200,35 @@ nnoremap <F3> :MBEToggle<cr>
 nnoremap <c-l> :MBEbn<cr>
 nnoremap <c-h> :MBEbp<cr>
 " }
+
+" syntastic{
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" }
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"编译运行调试
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"sh,c,cpp,py 按F5编译运行
+map <F5> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+    exec "w"
+    if &filetype == 'sh'
+        :!./%
+    elseif &filetype == 'c'
+        exec "!gcc % -o %< -lm"
+        exec "! ./%<"
+    elseif &filetype == 'cpp'
+        exec "!g++ % -o %< -lm"
+        exec "! ./%<"
+    elseif &filetype == 'python'
+        exec "!python3 %"
+    endif
+endfunc

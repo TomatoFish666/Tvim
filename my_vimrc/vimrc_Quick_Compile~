@@ -29,5 +29,3 @@ func! Rungdb()
     exec "!g++ % -g -o %< -lm"
     exec "!gdb ./%<"
 endfunc
-
-
