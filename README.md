@@ -31,18 +31,21 @@
 
 - 今天根据网上成吨的教程，大概了解了一下出现频率很高的n个插件，vim比想象的强大很多！
     - 然后就开工配置vim啦～～～啦啦啦～～～
+    - 参照教程：[https://github.com/yangyangwithgnu/use_vim_as_ide](https://github.com/yangyangwithgnu/use_vim_as_ide)
 
 ### 2016.2.16
 
 - 今天一定要把vim配置好！！！
 
+- 还差YCM插件和集成编译工具了！配置的时候又看到了一些不错的插件。。。也觉得自己一开始没必要装那么多插件，不要想一次装全了，慢慢来，有需求了再装～～～
+
 ---
 
 ## 目前选择的插件集合
 
-- 插件管理：pathogen/vundle
+- 插件管理：pathogen
 
-- 文件管理：nerdtree , minibufexpl , ctrlp
+- 文件管理：nerdtree , minibufexpl
 
 - 代码结构：tagbar
 
@@ -50,14 +53,15 @@
 
 - 自动补全：youcompleteme
 
-- 代码片段：ultisnips
+- 代码片段：/
 
 - 批量注释：nerdcommenter
 
-- 辅助功能：vim-multiple-cursors , mark , vim-markdown
+- 辅助功能：/
 
 - 酷炫界面：vim-colorschemes ， powerline
 
+- C/C++：c.vim , a.vim
 
 ---
 
@@ -93,13 +97,13 @@
 
 ### 代码结构
 
-- [taglist](https://github.com/vim-scripts/taglist.vim)
-    - ctags
-    
 - [tagbar](https://github.com/majutsushi/tagbar)
     - 列出当前文件中的宏、全局变量、函数、类等信息
     - taglist插件的升级版，功能更加完善
 
+- [taglist](https://github.com/vim-scripts/taglist.vim)
+    - ctags
+    
 ### 语法检查
 
 - [syntastic](https://github.com/scrooloose/syntastic)
@@ -155,6 +159,12 @@
     
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
     - markdown语法高亮
+
+- [vim-instant-markdown](https://github.com/suan/vim-instant-markdown)
+    - 配合firefox，markdown实时渲染
+
+- [vim-signature](https://github.com/kshenoy/vim-signature)
+    - 可视化的代码书签
 
 ### 酷炫界面
 
