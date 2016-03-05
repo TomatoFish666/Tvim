@@ -55,6 +55,7 @@ let mapleader=";"
 nnoremap <leader>h 0
 nnoremap <leader>l $
 
+" 设置复制粘贴要先 sudo apt-get install vim-gnome
 " 设置快捷键将选中文本块复制到系统剪贴板
 vnoremap <leader>y "+y
 " 设置快捷键将系统剪贴板内容粘贴至vim
