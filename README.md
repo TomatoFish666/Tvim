@@ -18,6 +18,8 @@
 
 - 看到这篇博文 [让vim支持系统剪贴板](http://blog.sina.com.cn/s/blog_76550fd701019rol.html)，装了vim-gnome，解决问题
 
+- 另外碰到了git重新设置远程仓库的问题，参考此链接[怎么修改Git remote add时使用的远程仓库？](https://www.douban.com/group/topic/33666661/)
+
 ### 2016.2.17
 
 - 忘了很重要的事情。。。今天还得花时间，把单个文件或少量文件的快速编译搞定！！！
