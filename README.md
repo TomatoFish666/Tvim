@@ -1,4 +1,4 @@
-# Learn_VimScript
+# Exercise_Vim_Vimscript
 
 - The Book: Learn VimScript the Hard Way
     - 第一本读完的英文原版书，209页，一个合适的开始
@@ -10,7 +10,7 @@
 
 ---
 
-### 2016.2.5
+### 2016.3.5
 
 - 换了笔记本，配置好了vim，发现 用 "+y和"+p 不能复制粘贴到vim之外。。。
 
