@@ -10,6 +10,12 @@
 
 ---
 
+### 2016.10.4
+
+Github要精简，这个仓库原来叫 Exercise_Vim_Vimscript，现在Exercise前缀要去掉，于是改成了myVimVimscript
+
+Vim和Vimscript还是今年年初学的，用到现在感觉良好，当然还有很多需要改进，Vimscript也只是略懂皮毛，自己写一个Vim插件是下一个目标！可惜暂时还没时间。。。
+
 ### 2016.9.11
 
 考研，很久没用vim，nerdcommenter注释的快捷键忘记了，只知道在vim中可以一条命令查看文档的，但是命令忘记了，囧rz...
