@@ -1,4 +1,4 @@
-# Exercise_Vim_Vimscript
+# myVimVimscript
 
 - The Book: Learn VimScript the Hard Way
     - 第一本读完的英文原版书，209页，一个合适的开始
