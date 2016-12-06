@@ -1,4 +1,4 @@
-# myVimVimscript
+# VimVimscript
 
 - The Book: Learn VimScript the Hard Way
     - 第一本读完的英文原版书，209页，一个合适的开始
@@ -9,6 +9,16 @@
 ---
 
 ---
+
+### 2016.12.7
+
+又把名字改了一下，感觉改仓库名不好，万一别人收藏了什么的，找起来就麻烦了。。。
+
+用Vim碰到了烦心事，Python3的部分语法被报错，按Python2写就没事了，很难受。。。
+
+基于JVM的Java/Scala都用Eclipse，C/C++/Python/JavaScript/……Vim挺好用的。。。
+
+还是以后看需要转IDE吧。。。
 
 ### 2016.10.4
 
@@ -106,7 +116,7 @@ Vim和Vimscript还是今年年初学的，用到现在感觉良好，当然还�
 - C/C++：c.vim , a.vim
 
 效果图：
-![vimrc0.1.png](./README_image/vimrc0.1.png)
+![vimrc0.1.png](./.README_image/vimrc0.1.png)
 
 ---
 
