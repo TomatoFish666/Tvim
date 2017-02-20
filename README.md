@@ -1,14 +1,24 @@
 # VimVimscript
 
-- The Book: Learn VimScript the Hard Way
-    - 第一本读完的英文原版书，209页，一个合适的开始
+The Book: Learn VimScript the Hard Way
+
+- 第一本读完的英文原版书，209页
     
-- 中文版：[笨方法学Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/)
-    - 学完英文版后，第二遍学中文版，解决一些不太理解的地方，以及复习
+中文版：[笨方法学Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/)
+
+- 学完英文版后，第二遍学中文版，解决一些不太理解的地方，以及复习
 
 ---
 
----
+### 2017.2.20
+
+上次说的Vim碰到了烦心事，是print不换行的问题，Python3中是`print("", end="")`，Vim中写完保存会报错（但运行没问题），百思不得其解，以为是Vim的语法检查插件对Python3支持不够，花了时间没解决，后来因为很少用到就慢慢忘记了。。。
+
+后来慢慢习惯了用 virtualenv，里面只有Python3，某一天突然又想到了这个问题，会不会是环境的问题，因为电脑上 Py2和Py3 都有，但是当时不知道为什么没试一试，可能在忙别的吧。。。
+
+今天又想到了这个问题，果断试了一下，果然，在virtualenv里，只有Python3，`print("", end="")`没有报错！再试试Py2和Py3共存的环境，还是会报错了。。。
+
+解决了一个问题，但是感觉自己对Vim和Vim插件的原理不够了解，有时间应该读读源码。。。
 
 ### 2016.12.7
 
@@ -28,7 +38,7 @@ Vim和Vimscript还是今年年初学的，用到现在感觉良好，当然还�
 
 ### 2016.9.11
 
-考研，很久没用vim，nerdcommenter注释的快捷键忘记了，只知道在vim中可以一条命令查看文档的，但是命令忘记了，囧rz...
+很久没用vim，nerdcommenter注释的快捷键忘记了，只知道在vim中可以一条命令查看文档的，但是命令忘记了，囧rz...
 
 网上查了下，是这条命令，记录一下`:h NERDCommenter`
 
