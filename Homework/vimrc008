@@ -1,9 +1,0 @@
-" ch08
-" 在你的~/.vimrc文件中为经常拼写错误的单词增加abbreviations配置。一定要使用 上一章中你创建的mappings来重新打开读取~/.vimrc文件。
-" 为你的邮箱地址、博客网址、签名添加abbreviations配置。
-" 为你经常输入的文本添加abbreviations配置。
-
-iabbrev eemail Tom@163.com
-iabbrev bblog www.tom.com
-iabbrev ggit www.github.com/tom
-iabbrev ccopy Copyright 2016 Tom, all rights reserved.
