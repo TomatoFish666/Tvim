@@ -122,7 +122,7 @@ endif
 autocmd FileType * EnableStripWhitespaceOnSave
 
 " >>>>>>>>>>>>>>>>>>>> vim-scripts/nginx.vim <<<<<<<<<<<<<<<<<<<<
-au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == 'conf' | setfiletype nginx | endif
 
 " >>>>>>>>>>>>>>>>>>>> powerline/powerline <<<<<<<<<<<<<<<<<<<<
 " powerline装好能正常显示，但是有些配置还不清楚，待研究
