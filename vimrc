@@ -139,16 +139,7 @@ set term=xterm-256color
 " autocmd! BufWritePost ~/.vimrc source ~/.vimrc
 
 " <F2>显示行数/GitGutter开关
-map <F2> :set number! \| GitGutterToggle<CR>
-
-" Ctrl-k 切换到上方的分割窗口
-nnoremap <C-K>k <C-W><C-K>
-" Ctrl-j 切换到下方的分割窗口
-nnoremap <C-J>j <C-W><C-J>
-" Ctrl-h 切换到左侧的分割窗口
-nnoremap <C-H>h <C-W><C-H>
-" Ctrl-l 切换到右侧的分割窗口
-nnoremap <C-L>l <C-W><C-L>
+map <F2> :set number! <bar> GitGutterToggle<CR>
 
 " Ctrl+w+k 当前窗口高度增大5行
 nnoremap <C-W><C-K> 5<C-W>+
@@ -249,10 +240,12 @@ autocmd BufNewFile,BufRead *.jenkinsfile set filetype=groovy
 " 当成html文件打开
 autocmd BufNewFile,BufRead *.vue,*.tpl set filetype=html
 " 设置2个空格长度的缩进
-autocmd BufNewFile,BufRead *.vue,*.js,*.scss,*.css,*.html
-            \ set shiftwidth=2 |
-            \ set tabstop=2 |
-            \ set softtabstop=2
+autocmd BufNewFile,BufRead *.vue,*.js,*.scss,*.css,*.html set
+            \ autoindent
+            \ shiftwidth=2
+            \ expandtab
+            \ tabstop=2
+            \ softtabstop=2
 " PEP8建议python代码一行不超过80列（分屏同时查看多个文件的话最好设置下）
-autocmd BufNewFile,BufRead *.py
-            \ set colorcolumn=80
+autocmd BufNewFile,BufRead *.py set
+            \ colorcolumn=80
