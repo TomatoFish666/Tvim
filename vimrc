@@ -60,8 +60,7 @@ filetype plugin indent on    " required
 " 配置各语言的工具，默认会启用所有安装了的，显示设置可以只启动列出来的
 let g:ale_linters = {
             \ 'python': ['flake8', 'pyls'],
-            \ 'javascript': ['eslint'],
-}
+            \ 'javascript': ['eslint']}
 
 " 配置fix工具，比如formatter，sorter等
 let g:ale_fixers = {
