@@ -35,6 +35,12 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'jnurmine/Zenburn'
 Plugin 'tomasr/molokai'
 
+" 前端开发相关的插件
+" javascript插件
+Plugin 'pangloss/vim-javascript'
+" Plugin 'othree/html5.vim'
+" Plugin 'posva/vim-vue' " 目前通过为vue文件设置复合filetype使用js插件
+
 " 高亮多余的空白符，设置为保存时去除多余的空白符
 Plugin 'ntpeters/vim-better-whitespace'
 " 高亮nginx配置文件（最新的是5年前的，Github上的是8年前的）
@@ -54,7 +60,7 @@ filetype plugin indent on    " required
 " 配置各语言的工具，默认会启用所有安装了的，显示设置可以只启动列出来的
 let g:ale_linters = {
             \ 'python': ['flake8', 'pyls'],
-            \}
+            \ 'javascript': ['eslint']}
 
 " 配置fix工具，比如formatter，sorter等
 let g:ale_fixers = {
@@ -122,7 +128,7 @@ endif
 autocmd FileType * EnableStripWhitespaceOnSave
 
 " >>>>>>>>>>>>>>>>>>>> vim-scripts/nginx.vim <<<<<<<<<<<<<<<<<<<<
-au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
+autocmd BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == 'conf' | setfiletype nginx | endif
 
 " >>>>>>>>>>>>>>>>>>>> powerline/powerline <<<<<<<<<<<<<<<<<<<<
 " powerline装好能正常显示，但是有些配置还不清楚，待研究
@@ -139,16 +145,7 @@ set term=xterm-256color
 " autocmd! BufWritePost ~/.vimrc source ~/.vimrc
 
 " <F2>显示行数/GitGutter开关
-map <F2> :set number! \| GitGutterToggle<CR>
-
-" Ctrl-k 切换到上方的分割窗口
-nnoremap <C-K>k <C-W><C-K>
-" Ctrl-j 切换到下方的分割窗口
-nnoremap <C-J>j <C-W><C-J>
-" Ctrl-h 切换到左侧的分割窗口
-nnoremap <C-H>h <C-W><C-H>
-" Ctrl-l 切换到右侧的分割窗口
-nnoremap <C-L>l <C-W><C-L>
+map <F2> :set number! <bar> GitGutterToggle<CR>
 
 " Ctrl+w+k 当前窗口高度增大5行
 nnoremap <C-W><C-K> 5<C-W>+
@@ -246,13 +243,15 @@ syntax on
 
 " 当成groovy文件打开
 autocmd BufNewFile,BufRead *.jenkinsfile set filetype=groovy
-" 当成html文件打开
-autocmd BufNewFile,BufRead *.vue,*.tpl set filetype=html
+" 给vue文件设置复合filetype
+autocmd BufNewFile,BufRead *.vue,*.tpl set filetype=vue.html.javascript.css
 " 设置2个空格长度的缩进
-autocmd BufNewFile,BufRead *.vue,*.js,*.scss,*.css,*.html
-            \ set shiftwidth=2 |
-            \ set tabstop=2 |
-            \ set softtabstop=2
+autocmd BufNewFile,BufRead *.vue,*.js,*.scss,*.css,*.html setlocal
+            \ autoindent
+            \ shiftwidth=2
+            \ expandtab
+            \ tabstop=2
+            \ softtabstop=2
 " PEP8建议python代码一行不超过80列（分屏同时查看多个文件的话最好设置下）
-autocmd BufNewFile,BufRead *.py
-            \ set colorcolumn=80
+autocmd BufNewFile,BufRead *.py setlocal
+            \ colorcolumn=80
