@@ -245,7 +245,7 @@ syntax on
 autocmd BufNewFile,BufRead *.jenkinsfile setlocal filetype=groovy
 " 给vue文件设置复合filetype
 autocmd BufNewFile,BufRead *.vue,*.tpl setlocal
-            \ filetype=javascript
+            \ filetype=html.javascript
             \ syntax=html
 " 设置2个空格长度的缩进
 autocmd BufNewFile,BufRead *.vue,*.js,*.scss,*.css,*.html setlocal
