@@ -243,9 +243,11 @@ syntax on
 "==================================================
 
 " 当成groovy文件打开
-autocmd BufNewFile,BufRead *.jenkinsfile set filetype=groovy
+autocmd BufNewFile,BufRead *.jenkinsfile setlocal filetype=groovy
 " 给vue文件设置复合filetype
-autocmd BufNewFile,BufRead *.vue,*.tpl set filetype=vue.html.javascript.css
+autocmd BufNewFile,BufRead *.vue,*.tpl setlocal
+            \ filetype=javascript
+            \ syntax=html
 " 设置2个空格长度的缩进
 autocmd BufNewFile,BufRead *.vue,*.js,*.scss,*.css,*.html setlocal
             \ autoindent
