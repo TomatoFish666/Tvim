@@ -48,6 +48,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'vim-scripts/nginx.vim'
 " 高亮apiblueprint文件
 Plugin 'kylef/apiblueprint.vim'
+" 符合pep8标准的自动缩进(Python)
+Plugin 'Vimjas/vim-python-pep8-indent'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -267,3 +269,8 @@ autocmd BufNewFile,BufRead *.vue,*.js,*.scss,*.css,*.html setlocal
 " PEP8建议python代码一行不超过80列（分屏同时查看多个文件的话最好设置下）
 autocmd BufNewFile,BufRead *.py setlocal
             \ colorcolumn=80
+            \ autoindent
+            \ shiftwidth=4
+            \ expandtab
+            \ tabstop=4
+            \ softtabstop=4
