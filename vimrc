@@ -31,9 +31,10 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " 颜色主题
 " Plugin 'flazz/vim-colorschemes'
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
 Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
 
 " 前端开发相关的插件
 " javascript插件
@@ -118,10 +119,20 @@ if has('gui_running')
     colorscheme solarized
 else
     " colorscheme zenburn
+    " colorscheme solarized
     let g:molokaio_original=1
     colorscheme molokai
-    " colorscheme zenburn
+    " colorscheme gruvbox
 endif
+set t_Co=256
+
+" 真彩色(true color)支持，有问题待研究QAQ
+" set t_8f=[38;2;%lu;%lu;%lum
+" set t_8b=[48;2;%lu;%lu;%lum
+" let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
+" let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
+" enable true color
+" set termguicolors
 
 " >>>>>>>>>>>>>>>>>>>> vim-better-whitespace <<<<<<<<<<<<<<<<<<<<
 " 任意类型的文件，保存时自动清楚多余的空白符
@@ -132,8 +143,6 @@ autocmd BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == 'conf'
 
 " >>>>>>>>>>>>>>>>>>>> powerline/powerline <<<<<<<<<<<<<<<<<<<<
 " powerline装好能正常显示，但是有些配置还不清楚，待研究
-" Ubuntu Desktop上用Terminal，下面三行注释了也没事；但是用putty连接虚拟机，需要下面一行
-set term=xterm-256color
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
 " let g:Powerline_symbols = 'fancy'
 
@@ -242,10 +251,11 @@ syntax on
 "==================================================
 
 " 当成groovy文件打开
-autocmd BufNewFile,BufRead *.jenkinsfile setlocal filetype=groovy
+autocmd BufNewFile,BufRead *.jenkinsfile setlocal
+            \ filetype=groovy
 " 给vue文件设置复合filetype
 autocmd BufNewFile,BufRead *.vue,*.tpl setlocal
-            \ filetype=javascript
+            \ filetype=vue.html.javascript.css
             \ syntax=html
 " 设置2个空格长度的缩进
 autocmd BufNewFile,BufRead *.vue,*.js,*.scss,*.css,*.html setlocal
