@@ -45,7 +45,9 @@ Plugin 'pangloss/vim-javascript'
 " 高亮多余的空白符，设置为保存时去除多余的空白符
 Plugin 'ntpeters/vim-better-whitespace'
 " 高亮nginx配置文件（最新的是5年前的，Github上的是8年前的）
-Plugin 'vim-scripts/nginx.vim'
+" Plugin 'vim-scripts/nginx.vim'
+" 换用nginx插件，github上是17年左右的提交
+Plugin 'chr4/nginx.vim'
 " 高亮apiblueprint文件
 Plugin 'kylef/apiblueprint.vim'
 " 符合pep8标准的自动缩进(Python)
@@ -141,7 +143,8 @@ set t_Co=256
 autocmd FileType * EnableStripWhitespaceOnSave
 
 " >>>>>>>>>>>>>>>>>>>> vim-scripts/nginx.vim <<<<<<<<<<<<<<<<<<<<
-autocmd BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == 'conf' | setfiletype nginx | endif
+" 换用了其他nginx插件，还在试用，先保留该配置
+" autocmd BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == 'conf' | setfiletype nginx | endif
 
 " >>>>>>>>>>>>>>>>>>>> powerline/powerline <<<<<<<<<<<<<<<<<<<<
 " powerline装好能正常显示，但是有些配置还不清楚，待研究
