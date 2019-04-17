@@ -79,8 +79,12 @@ let g:ale_completion_enabled = 1
 let g:ale_completion_delay = 20
 
 " 定义跳转
+map <F3> :ALEGoToDefinitionInVSplit<CR>
+map <F4> :ALEGoToDefinitionInTab<CR>
+map <F6> :ALEGoToDefinition<CR>
 
 " 引用搜索
+map <F7> :ALEFindReferences<CR>
 
 " Hovering（咋翻译？）
 
@@ -141,6 +145,12 @@ set t_Co=256
 " >>>>>>>>>>>>>>>>>>>> vim-better-whitespace <<<<<<<<<<<<<<<<<<<<
 " 任意类型的文件，保存时自动清楚多余的空白符
 autocmd FileType * EnableStripWhitespaceOnSave
+" 高亮空白字符
+let g:better_whitespace_enabled=1
+" 保存时清除空白字符
+let g:strip_whitespace_on_save=1
+" 清除空白字符不询问
+let g:strip_whitespace_confirm=0
 
 " >>>>>>>>>>>>>>>>>>>> vim-scripts/nginx.vim <<<<<<<<<<<<<<<<<<<<
 " 换用了其他nginx插件，还在试用，先保留该配置
