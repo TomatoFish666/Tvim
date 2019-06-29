@@ -196,9 +196,9 @@ set wrap
 " 展示行号
 set number
 
-" 标记出当前行/当前列
-set cursorline
-set cursorcolumn
+" 标记出当前行/当前列（可能会导致卡顿）
+" set cursorline
+" set cursorcolumn
 
 " 高亮所搜的内容
 set hlsearch
@@ -219,13 +219,13 @@ set completeopt=menu,menuone,noselect,noinsert
 " 为.xxx.y.swap生成.xxx.y.swap文件
 set swapfile
 " .xxx.y.swap文件的存储位置
-set directory=/tmp
+set directory=~/.vimtmp
 " 为xxx.y创建xxx.y~格式的备份文件；编辑已经打开的文件时会创建
 set backup
 " 修改格式，由xxx.py~ 改为 xxx.py.backup
 set backupext=.backup
 " 备份文件的存储位置
-set backupdir=/tmp
+set backupdir=~/.vimtmp
 
 " 自动缩进
 set autoindent
@@ -258,8 +258,12 @@ set wildignore=*.o,*~,*.pyc
 " filetype indent on，允许vim为不同类型的文件定义不同的缩进格式
 filetype plugin indent on
 
-" 语法高亮，颜值++！
+" 语法高亮，颜值++！（但是会明显导致卡顿QAQ）
 syntax on
+
+" 一些不确定的优化
+set ttyfast
+set lazyredraw
 
 "==================================================
 " 对部分文件类型进行单独设置
